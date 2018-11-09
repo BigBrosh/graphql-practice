@@ -1,5 +1,6 @@
-import {listUsers} from "../../controllers/UserController";
+import {getUserById, listUsers} from "../../controllers/UserController";
 
 export const queryResolvers = {
-  users: () => listUsers()
+  users: () => listUsers(),
+  user: (parent, { id }) => getUserById(id)
 };

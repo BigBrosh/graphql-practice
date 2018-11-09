@@ -4,7 +4,7 @@ import {UserType} from "./User/UserType";
 import { UserQueries as User } from "./User/UserQueries";
 import {OrganizationType} from "./Organization/OrganizationType";
 import {OrganizationQueries as Organization} from "./Organization/OrganizationQueries";
-import {rootQuery} from "./query/rootQuery";
+import {rootQuery} from "./query/rootQueryType";
 
 import {queryResolvers} from "./query/query";
 
