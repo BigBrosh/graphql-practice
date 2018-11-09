@@ -15,12 +15,21 @@ export class User extends Component {
 
   render() {
     const {
+      isChecked
+    } = this.state;
+
+    const {
       id,
       name
     } = this.props;
 
     return (
-      <div onClick={this.toogleChecked}>User {id} - {name}</div>
+      <div onClick={this.toogleChecked}>
+        User {id} - {name}
+        {
+          isChecked && <p>Checked</p>
+        }
+      </div>
     );
   }
 }
