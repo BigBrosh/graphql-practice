@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 import {listUsers} from "../../query/User";
+import {User} from "../User";
 
 class Users extends Component {
   render() {
@@ -12,13 +13,13 @@ class Users extends Component {
         {
           loading ?
             <div>Loading...</div> :
-            <ul>
+            <div>
               {
                 users.map(({ id, name }) => {
-                  return <li key={id}>User {id} - {name}</li>;
+                  return <User key={id} id={id} name={name} />;
                 })
               }
-            </ul>
+            </div>
         }
       </div>
     );
