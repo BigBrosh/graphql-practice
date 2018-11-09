@@ -9,17 +9,17 @@ class Users extends Component {
 
     return (
       <div>
-        <h2>Users</h2>
+        <h2>Users:</h2>
         {
           loading ?
             <div>Loading...</div> :
-            <div>
+            <ul>
               {
                 users.map(({ id, name }) => {
                   return <User key={id} id={id} name={name} />;
                 })
               }
-            </div>
+            </ul>
         }
       </div>
     );

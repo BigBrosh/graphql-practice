@@ -1,6 +1,6 @@
 export const UserType = `
   type User {
-    id: ID
+    id: Int
     name: String
     organizations: [Organization]
   }

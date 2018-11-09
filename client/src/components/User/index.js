@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import {withApollo} from 'react-apollo';
+
+import {Organizations as orgs} from "./organizations";
+
+const Organizations = withApollo(orgs);
 
 export class User extends Component {
   state = {
@@ -24,12 +29,16 @@ export class User extends Component {
     } = this.props;
 
     return (
-      <div onClick={this.toogleChecked}>
+      <li
+        onClick={this.toogleChecked}
+        style={{ marginBottom: 6 }}
+      >
         User {id} - {name}
         {
-          isChecked && <p>Checked</p>
+          isChecked &&
+            <Organizations userId={id}/>
         }
-      </div>
+      </li>
     );
   }
 }
