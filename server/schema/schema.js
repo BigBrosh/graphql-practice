@@ -5,18 +5,22 @@ import { UserQueries as User } from "./User/UserQueries";
 import {OrganizationType} from "./Organization/OrganizationType";
 import {OrganizationQueries as Organization} from "./Organization/OrganizationQueries";
 import {rootQuery} from "./query/rootQueryType";
+import {MutationsType} from './mutations/rootMutationsType';
 
 import {queryResolvers} from "./query/query";
+import {Mutations} from './mutations/mutations';
 
 export const schema = makeExecutableSchema({
   typeDefs: [
     UserType,
     OrganizationType,
-    rootQuery
+    rootQuery,
+    MutationsType
   ],
   resolvers: {
     User,
     Organization,
-    Query: queryResolvers
+    Query: queryResolvers,
+    Mutation: Mutations
   }
 });
