@@ -5,7 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import Users from './components/Users';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:4002/graphql'
 });
 
 class App extends Component {
