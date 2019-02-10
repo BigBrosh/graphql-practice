@@ -7,6 +7,8 @@ import {MutationsType} from './mutations/rootMutationsType';
 
 import {queryResolvers} from "./query/query";
 import {Mutations} from './mutations/mutations';
+import {UserQueries} from "./User/UserQueries";
+import {OrganizationQueries} from "./Organization/OrganizationQueries";
 
 export const schema = makeExecutableSchema({
   typeDefs: [
@@ -17,6 +19,8 @@ export const schema = makeExecutableSchema({
   ],
   resolvers: {
     Query: queryResolvers,
-    Mutation: Mutations
+    Mutation: Mutations,
+    User: UserQueries,
+    Organization: OrganizationQueries
   }
 });
