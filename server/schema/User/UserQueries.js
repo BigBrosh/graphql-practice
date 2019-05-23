@@ -1,5 +1,5 @@
 import {listOrganizationsByUserId} from "../../controllers/OrganizationController";
 
 export const UserQueries = {
-  organizations: ({ id }) => listOrganizationsByUserId(id)
+  organizations: (parent) => listOrganizationsByUserId(parent.id)
 };

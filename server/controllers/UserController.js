@@ -1,8 +1,8 @@
 import { users } from "../model/User";
 import {organizations} from "../model/Organization";
 
-function listUsers() {
-  return users;
+function listUsers(limit) {
+  return users.slice(0, limit);
 }
 
 function listUsersByOrganizationId(orgId) {
